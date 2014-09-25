@@ -25,7 +25,6 @@ $(document).ready(function () {
 	
 	//Get League Settings
 	var league_id = document.URL.match(/leagueId=(\d+)/)[1];
-<<<<<<< HEAD
 
 	//check local store
 	chrome.storage.sync.get('league_settings', function(settings)
@@ -42,10 +41,6 @@ $(document).ready(function () {
 			window.league_settings = settings['league_settings'];
 			getPosProjections();
 		}
-=======
-	$.get('http://games.espn.go.com/ffl/leaguesetup/sections/scoring', {"leagueId": league_id}, function(d) {
-		parse_data(d);
->>>>>>> original-repo/master
 	});
 	
 	function parse_data(league_data) {
